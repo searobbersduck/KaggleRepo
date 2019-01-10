@@ -418,7 +418,7 @@ class QuoraTitleProcessor(DataProcessor):
     def get_dev_examples(self, data_dir):
         return self._create_examples(os.path.join(data_dir, 'test_s.csv'), 'dev')
 
-    def get_dev_examples(self, data_dir):
+    def get_test_examples(self, data_dir):
         return self._create_examples(os.path.join(data_dir, 'test.csv'), 'test')
 
     def get_labels(self):
