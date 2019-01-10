@@ -8,6 +8,8 @@ __pycache__/
 
 # ide
 .idea
+*.csv
+*.tsv
 
 
 # Distribution / packaging
