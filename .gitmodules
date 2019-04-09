@@ -1,3 +1,6 @@
 [submodule "quora_insincere/bert"]
 	path = quora_insincere/bert
 	url = https://github.com/google-research/bert.git
+[submodule "toxicity_cls/bert"]
+	path = toxicity_cls/bert
+	url = https://github.com/google-research/bert.git
