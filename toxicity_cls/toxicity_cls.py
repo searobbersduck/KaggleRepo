@@ -380,13 +380,13 @@ class ColaProcessor(DataProcessor):
 
 class ToxicityDataPrecessor(DataProcessor):
     def get_train_examples(self, data_dir):
-        self._create_examples(os.path.join(data_dir, 'train.csv'), 'train')
+        return self._create_examples(os.path.join(data_dir, 'train.csv'), 'train')
 
     def get_dev_examples(self, data_dir):
-        self._create_examples(os.path.join(data_dir, 'train.csv'), 'dev')
+        return self._create_examples(os.path.join(data_dir, 'train.csv'), 'dev')
 
     def get_test_examples(self, data_dir):
-        self._create_examples(os.path.join('test.csv'), 'test')
+        return self._create_examples(os.path.join('test.csv'), 'test')
 
     def get_labels(self):
         return ['0', '1']
