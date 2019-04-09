@@ -383,7 +383,7 @@ class ToxicityDataPrecessor(DataProcessor):
         self._create_examples(os.path.join(data_dir, 'train.csv'), 'train')
 
     def get_dev_examples(self, data_dir):
-        self._create_examples(os.path.join(data_dir, 'train.csv'), 'train')
+        self._create_examples(os.path.join(data_dir, 'train.csv'), 'dev')
 
     def get_test_examples(self, data_dir):
         self._create_examples(os.path.join('test.csv'), 'test')
@@ -404,7 +404,7 @@ class ToxicityDataPrecessor(DataProcessor):
                 label = str(0)
             else:
                 text_a = tokenization.convert_to_unicode(row['comment_text'])
-                label = str(csv['target1'])
+                label = str(row['target1'])
             examples.append(
                 InputExample(guid=guid, text_a=text_a, text_b=None, label=label))
         return examples
