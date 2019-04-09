@@ -400,10 +400,10 @@ class ToxicityDataPrecessor(DataProcessor):
         for i,row in csv.iterrows():
             guid = "%s-%s" % (set_type, i)
             if set_type == 'test':
-                text_a = tokenization.convert_to_unicode(csv['comment_text'])
+                text_a = tokenization.convert_to_unicode(row['comment_text'])
                 label = str(0)
             else:
-                text_a = tokenization.convert_to_unicode(csv['comment_text'])
+                text_a = tokenization.convert_to_unicode(row['comment_text'])
                 label = str(csv['target1'])
             examples.append(
                 InputExample(guid=guid, text_a=text_a, text_b=None, label=label))
