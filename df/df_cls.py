@@ -386,7 +386,7 @@ class SentimentDataPrecessor(DataProcessor):
         return self._create_examples(os.path.join(data_dir, 'train.csv'), 'dev')
 
     def get_test_examples(self, data_dir):
-        return self._create_examples(os.path.join('test.csv'), 'test')
+        return self._create_examples(os.path.join(data_dir, 'test.csv'), 'test')
 
     def get_labels(self):
         return ['0', '1', '2']
