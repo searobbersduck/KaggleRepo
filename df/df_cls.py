@@ -397,7 +397,7 @@ class SentimentDataPrecessor(DataProcessor):
         examples = []
         for i,row in csv.iterrows():
             guid = "%s-%s" % (set_type, i)
-            if row['title'] == '' or row['label'] is None or type(row['title']) is float:
+            if (set_type != 'test') and (row['title'] == '' or row['label'] is None or type(row['title']) is float):
                 continue
             if set_type == 'test':
                 text_a = tokenization.convert_to_unicode(row['title'])
